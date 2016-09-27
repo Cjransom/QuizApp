@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="description" content="Exemplary solution for Quiz App challenge in Thinkful's Front End Web Development course">
+
+  <title>Thinkful | Quiz App Solution</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="styles/grid.css"> TODO -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="divImg"><img src="computer-quiz.jpg" /></div>
+  <div class="container">
+
+    <main></main>
+
+  </div>
+
+  <!-- inline styling this instead of CSS because it should never be viewable to anyone except our JS, which uses this content as mini-templates for questions
+  and answers -->
+  <div style="display:none;">
+
+    <div id="js-start-template">
+      <h1>Computer Industry Quiz</h1>
+      <p>This app tests your knowledge of the computer world</p>
+      <p><em>MAY THE FORCE BE WITH YOU!</em></p>
+      <form name="game-start">
+        <button type="submit">Begin Quiz</button>
+      </form>
+    </div>
+
+    <div id="js-question-template">
+      <div id="divQuestion"><h3><span class="js-question-count"></span><span class="js-question-text"></span></h3></div>
+      <div id=divForm><form name="current-question">
+        <ol type="A" class="js-choices"></ol>
+        <button type="submit">Check Answer</button>
+        <button class="js-restart-game">Reset</button>
+      </form></div>
+    </div>
+
+    <div id="js-choice-template">
+      <li>
+        <input type="radio" name="user-answer" required>
+        <label></label>
+      </li>
+    </div>
+
+    <div id="js-answer-feedback-template">
+      <div class="js-feedback-container">
+        <div class="js-feedback-header"></div>
+        <p class="js-feedback-text"></p>
+        <button class="js-see-next"></button>
+      </div>
+    </div>
+
+    <div id="js-final-feedback-template">
+      <h1>Final Grade</h1>
+      <p class="js-results-text"></p>
+      <button class="js-restart-game">Start over</button>
+    </div>
+
+  </div>
+    <script src="jquery-3.1.0.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
